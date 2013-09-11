@@ -1,0 +1,122 @@
+/*
+	=== Grid-System ===
+*/
+.span_1  {width:6.25%; } .offset_1  {margin-left:6.25%; }
+.span_2  {width:12.5%; } .offset_2  {margin-left:12.5%; } .offset_2_1{margin-left: 2.084%}
+.span_3  {width:18.75%;} .offset_3  {margin-left:18.75%;} .offset_2_2{margin-left: 3.125%}
+.span_4  {width:25.0%; } .offset_4  {margin-left:25.0%; }
+.span_5  {width:31.25%;} .offset_5  {margin-left:32.35%;}
+.span_6  {width:37.5%; } .offset_6  {margin-left:37.5%; }
+.span_7  {width:43.75%;} .offset_7  {margin-left:43.75%;}
+.span_8  {width:50.0%; } .offset_8  {margin-left:50.0%; }
+.span_9  {width:56.25%;} .offset_9  {margin-left:56.25%;}
+.span_10 {width:62.5%; } .offset_10 {margin-left:62.5%; }
+.span_11 {width:68.75%;} .offset_11 {margin-left:68.75%;}
+.span_12 {width:75.0%; } .offset_12 {margin-left:75.0%; }
+.span_13 {width:81.25%;} .offset_13 {margin-left:81.25%;}
+.span_14 {width:87.5%; } .offset_14 {margin-left:87.5%; }
+.span_15 {width:93.75%;} .offset_15 {margin-left:93.75%;}
+.span_16 {width:100%;  } .offset_16 {margin-left:100%;  }
+
+.row:after, .clearfix:after{
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.column{
+	float: left;
+	display: inline;
+    float:left;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    -moz-background-clip:padding-box !important;
+    -webkit-background-clip:padding-box !important;
+    background-clip:padding-box !important;
+}
+
+/*
+	=== Responsivness-Magic ===
+*/
+/* VERY Large desktop */
+@media (min-width: 1900px) {
+	.container{
+		max-width: 1900px;
+	}
+}
+/* Large desktop */
+@media (min-width: 1200px) and (max-width: 1899px) {
+	.visible-desktop{display:auto;} .hidden-desktop{display:none}
+	.container{
+		max-width: 1200px;
+	}
+}
+@media (min-width: 979px) and (max-width: 1199px) {
+	.container{
+		max-width: 980px;
+	}
+	.hero-content > p{
+		font-size: 4em !important;
+	}
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (max-width: 978px) {
+	.visible-tablet{display:auto;} .hidden-tablet{display:none}
+	.container{
+		max-width: 767px;
+	}
+	.column{
+		width: 100% !important;
+		margin-left: 0;
+		margin-right: 0;
+		min-height: 0;
+	}
+	.full-on-tablet{
+		width: 100% !important;
+		margin: 80px 0 !important;
+	}
+	.hero-content > p{
+		font-size: 3.2em !important;
+	}
+}
+
+/* Landscape phones and down */
+@media (max-width: 766px) {
+	.visible-phone{display:auto;} .hidden-phone{display:none} .visible-portrait{display:auto;} .hidden-portrait{display:none;} .visible-tablet{display:auto;} .hidden-tablet{display:none}
+	html,body{
+
+	}
+	.top-bar{
+		position: static !important;
+	}
+	.menu-toggle{
+		display: inline-block !important;
+	}
+	.nav li{
+		width: 100%;
+		height: 0px;
+	}
+	.top-bar .divider{
+		width:100% !important;
+		margin: 1px 0 !important;
+		height: 1px !important;
+	}
+	.nav{
+		opacity: 0;
+		margin: 0 !important;
+		display: none;
+	}
+	.nav{
+		width: 100%;
+	}
+	.hero-content > p{
+		font-size: 2.2em !important;
+	}
+}
+
+.container{
+	margin: 0 auto;
+}

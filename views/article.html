@@ -1,0 +1,27 @@
+<div class="article">
+	{{#if showMeta}}<h2>{{title}}</h2>{{/if}}
+
+	{{{html}}}
+
+	<div class="article-footer">
+		<p class="muted pull-left">{{published}}</p>
+		<p class="muted pull-right"><a href="#"><i class="icon-share-alt"></i> Share</a> &ndash; <a href="/article/{{urlname}}.md"><i class="icon-code"></i> Source</a></p>
+		
+		<div class="clearfix"></div>
+
+		<ul class="comma-list tag-list">
+			{{#each tags}}<li><a href="/tag/{{this}}">#{{this}}</a></li>{{/each}}
+		</ul>
+	</div>
+</div>
+
+<div class="comments">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+		(function() {
+			var dsq=document.createElement('script');dsq.type='text/javascript';dsq.async=true;dsq.src='//localcraftde.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" target="_blank">comments powered by Disqus.</a></noscript>
+</div>

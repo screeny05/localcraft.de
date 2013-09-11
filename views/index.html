@@ -1,0 +1,35 @@
+{{#each articles}}
+	<div class="article">
+		{{#if showMeta}}<h2><a href="/article/{{urlname}}">{{title}}</a></h2>{{/if}}
+
+		<p>{{{catcher}}}</p>
+		{{#if showMore}}<a href="/article/{{urlname}}" class="read-more">Weiterlesen</a>{{/if}}
+
+		<div class="article-footer">
+			<p class="muted pull-left">{{published}} &ndash; <a href="/article/{{urlname}}#disqus_thread"></a></p>
+			<p class="muted pull-right"><a href="#"><i class="icon-share-alt"></i> Share</a> &ndash; <a href="/article/{{urlname}}.md"><i class="icon-code"></i> Source</a></p>
+
+			<div class="clearfix"></div>
+
+			<ul class="comma-list tag-list">
+				{{#each tags}}<li><a href="/tag/{{this}}">#{{this}}</a></li>{{/each}}
+			</ul>
+		</div>
+
+
+	</div>
+{{/each}}
+
+{{#unless gotArticles}}
+	<div class="brick">
+		<h2>Es gibt keine Artikel, die angezeigt werden können.</h2>
+	</div>
+{{/unless}}
+
+
+<script type="text/javascript">
+	(function(){
+		var dsq=document.createElement('script');dsq.type='text/javascript';dsq.async=true;dsq.src='//localcraftde.disqus.com/count.js';
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
